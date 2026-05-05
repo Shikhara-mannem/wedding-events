@@ -20,6 +20,19 @@
             overflow: hidden; /* For full screen particle effects */
         }
 
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 20%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
         .invitation-card {
             background-color: #3b1c32;
             border-radius: 20px;
@@ -43,13 +56,11 @@
         
         .floral-top {
             top: -40px;
-            /* Placeholder for top floral cluster */
             background: radial-gradient(ellipse at top, rgba(247, 92, 130, 0.15) 0%, transparent 60%);
         }
 
         .floral-bottom {
             bottom: -40px;
-            /* Placeholder for bottom floral cluster */
             background: radial-gradient(ellipse at bottom, rgba(247, 92, 130, 0.15) 0%, transparent 60%);
         }
 
@@ -150,6 +161,8 @@
 </head>
 <body>
 
+    <div class="bg-pattern"></div>
+
     <div class="invitation-card" id="cardArea">
         <div class="floral-top"></div>
         
@@ -161,8 +174,7 @@
         <h1>Sai Kumar</h1>
         
         <div class="event-details">
-            <p>MAY 8, 2026</p>
-            <p>At 4:30 PM</p>
+            <p>MAY 8, 2026 | 4:30 PM onwards</p>
             <p style="margin-top:15px;">[PLACE HOLDER]</p>
             <p>[VENUE NAME]</p>
             <p>[VENUE LOCATION]</p>
@@ -213,7 +225,7 @@
         }
 
         function triggerHearts() {
-            const emojis = [ '✨'];
+            const emojis = ['💖', '✨', '🌸', '💍'];
             var card = document.getElementById('cardArea');
             var rect = card.getBoundingClientRect();
             
