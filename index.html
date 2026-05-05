@@ -10,9 +10,9 @@
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff7e5f, #feb47b, #f75c82); /* Orange to Pink Gradient */
+            background: #0f172a; /* Deep Royal Blue */
             font-family: 'Cinzel', serif;
-            color: #2c2c2c; /* Dark grey for contrast */
+            color: #ffffff; /* White text for contrast */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,68 +20,102 @@
             overflow: hidden; /* For full screen particle effects */
         }
 
+        /* Abstract Floral/Filigree background elements */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 20%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
         .invitation-card {
-            background: rgba(255, 255, 255, 0.85); /* Highly opaque white */
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 2px solid #d4af37; /* Deeper gold */
+            background: rgba(15, 23, 42, 0.8); /* Semi-transparent blue for the card itself */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid #d4af37; /* Elegant Gold */
             border-radius: 20px;
             padding: 40px;
             text-align: center;
-            max-width: 550px;
+            max-width: 400px; /* Slimmer for phone friendly look */
             width: 90%;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2), inset 0 0 20px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 0 20px rgba(212, 175, 55, 0.15);
             position: relative;
             z-index: 10;
         }
 
+        /* Mock Floral Garlands - CSS representations since we can't use external images easily */
+        .floral-top, .floral-bottom {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        
+        .floral-top {
+            top: -20px;
+            background: radial-gradient(ellipse at top, rgba(247, 92, 130, 0.3) 0%, transparent 70%);
+        }
+
+        .floral-bottom {
+            bottom: -20px;
+            background: radial-gradient(ellipse at bottom, rgba(247, 92, 130, 0.3) 0%, transparent 70%);
+        }
+
         .header-text {
-            font-size: 1.1em;
-            letter-spacing: 4px;
+            font-size: 0.9em;
+            letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 20px;
-            color: #4a4a4a; /* Darker grey for header */
+            color: #d1d5db; /* Light grey */
         }
 
         h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 4em;
-            color: #c59b27; /* Richer gold for names */
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Softened shadow */
+            font-size: 3.5em; /* Slightly smaller for mobile */
+            color: #f75c82; /* Pink script */
+            text-shadow: 1px 1px 0px #d4af37, -1px -1px 0px #d4af37, 1px -1px 0px #d4af37, -1px 1px 0px #d4af37; /* Faux gold highlight */
             margin: 10px 0;
             line-height: 1.1;
         }
 
         .ampersand {
             font-family: 'Great Vibes', cursive;
-            font-size: 2.2em;
-            color: #c59b27;
+            font-size: 2em;
+            color: #d4af37; /* Gold ampersand */
             margin: -10px 0;
+            text-shadow: none;
         }
 
         .gold-divider {
             height: 2px;
-            background: linear-gradient(90deg, transparent, #c59b27, transparent);
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
             width: 70%;
             margin: 25px auto;
         }
 
         .event-details {
-            font-size: 1.1em;
+            font-size: 1em;
             line-height: 1.8;
             letter-spacing: 1px;
             margin-bottom: 30px;
-            color: #2c2c2c; /* Ensure dark text */
+            color: #ffffff;
         }
 
-        .event-details strong {
-            color: #c59b27; /* Gold for emphasis */
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-        
         .event-details p {
             margin: 10px 0;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 2px;
         }
 
         /* Interactive Buttons Section */
@@ -93,13 +127,13 @@
         }
 
         button {
-            background: #fff;
-            border: 2px solid #c59b27;
-            color: #c59b27; /* Gold text */
-            padding: 10px 20px;
+            background: transparent;
+            border: 1px solid #d4af37;
+            color: #d4af37; /* Gold text */
+            padding: 10px 15px;
             font-family: 'Cinzel', serif;
             font-weight: 600;
-            font-size: 0.9em;
+            font-size: 0.8em;
             cursor: pointer;
             border-radius: 30px;
             transition: all 0.3s ease;
@@ -107,15 +141,14 @@
             letter-spacing: 1px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
         }
 
         button:hover {
-            background: #c59b27;
-            border-color: #c59b27;
+            background: rgba(212, 175, 55, 0.2);
             color: #fff;
-            box-shadow: 0 5px 15px rgba(197, 155, 39, 0.4);
-            transform: translateY(-2px);
+            border-color: #fff;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
         }
 
         /* Animations */
@@ -134,7 +167,11 @@
 </head>
 <body>
 
-    <div class="invitation-card">
+    <div class="bg-pattern"></div>
+
+    <div class="invitation-card" id="cardArea">
+        <div class="floral-top"></div>
+        
         <div class="header-text">Join us to celebrate the<br>Engagement of</div>
         
         <h1>Sri Mitra</h1>
@@ -144,24 +181,33 @@
         <div class="gold-divider"></div>
         
         <div class="event-details">
-            <p><strong>DATE & TIME</strong><br>May 8th, 2026 | 4:30 PM Onwards</p>
-            <p><strong>VENUE</strong><br>[Placeholder: Venue Name]</p>
-            <p><strong>LOCATION</strong><br>[Placeholder: Venue Address/Location]</p>
+            <p>MAY 8, 2026</p>
+            <p>At 4:30 PM</p>
+            <p style="margin-top:20px;">[PLACE HOLDER]</p>
+            <p>[VENUE NAME]</p>
+            <p>[VENUE LOCATION]</p>
         </div>
         
         <div class="interactive-actions">
-            <button onclick="triggerConfetti()"><span>🎉</span> Celebration Pop</button>
-            <button onclick="triggerHearts()"><span>✨</span> Send Blessings</button>
+            <button onclick="triggerConfetti()"><span>🎉</span> Celebrate</button>
+            <button onclick="triggerHearts()"><span>✨</span> Blessings</button>
         </div>
+        
+        <div class="floral-bottom"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
         function triggerConfetti() {
-            // Elegant gold, orange, and pink confetti
             var duration = 3 * 1000;
             var animationEnd = Date.now() + duration;
-            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 };
+            
+            // Get card dimensions to center the pop on the card
+            var card = document.getElementById('cardArea');
+            var rect = card.getBoundingClientRect();
+            var centerX = (rect.left + rect.width / 2) / window.innerWidth;
+            var centerY = (rect.top + rect.height / 2) / window.innerHeight;
 
             function randomInRange(min, max) {
               return Math.random() * (max - min) + min;
@@ -175,25 +221,34 @@
               }
 
               var particleCount = 50 * (timeLeft / duration);
-              // since particles fall down, start a bit higher than random
-              confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#c59b27', '#ff7e5f', '#f75c82', '#ffffff'] }));
-              confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#c59b27', '#ff7e5f', '#f75c82', '#ffffff'] }));
+              
+              // Pop from center of card outwards
+              confetti(Object.assign({}, defaults, { 
+                  particleCount, 
+                  origin: { x: centerX, y: centerY }, 
+                  colors: ['#d4af37', '#f75c82', '#0ea5e9', '#ffffff'] // Gold, Pink, Blue, White
+              }));
+              
             }, 250);
         }
 
         function triggerHearts() {
             const emojis = ['💖', '✨', '🌸', '💍'];
-            for(let i=0; i<8; i++) {
+            var card = document.getElementById('cardArea');
+            var rect = card.getBoundingClientRect();
+            
+            for(let i=0; i<12; i++) {
                 setTimeout(() => {
                     const icon = document.createElement('div');
                     icon.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
                     icon.classList.add('floating-icon');
-                    icon.style.left = (Math.random() * 80 + 10) + 'vw';
-                    icon.style.bottom = '-20px';
-                    icon.style.fontSize = (Math.random() * 1.5 + 1.5) + 'rem';
+                    
+                    // Start from the bottom of the card
+                    icon.style.left = (rect.left + Math.random() * rect.width) + 'px';
+                    icon.style.bottom = (window.innerHeight - rect.bottom) + 'px';
+                    icon.style.fontSize = (Math.random() * 1.5 + 1) + 'rem';
                     document.body.appendChild(icon);
                     
-                    // Clean up DOM after animation
                     setTimeout(() => icon.remove(), 4000);
                 }, i * 150);
             }
