@@ -26,7 +26,7 @@
             -webkit-backdrop-filter: blur(12px);
             border: 2px solid #dfb163; /* Elegant Gold */
             border-radius: 20px;
-            padding: 50px 40px;
+            padding: 40px;
             text-align: center;
             max-width: 550px;
             width: 90%;
@@ -39,22 +39,22 @@
             font-size: 1.1em;
             letter-spacing: 4px;
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: #fdfbf7;
         }
 
         h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 4.5em;
+            font-size: 4em;
             color: #dfb163; /* Gold */
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            margin: 15px 0;
+            margin: 10px 0;
             line-height: 1.1;
         }
 
         .ampersand {
             font-family: 'Great Vibes', cursive;
-            font-size: 2.5em;
+            font-size: 2.2em;
             color: #dfb163;
             margin: -10px 0;
         }
@@ -63,26 +63,31 @@
             height: 2px;
             background: linear-gradient(90deg, transparent, #dfb163, transparent);
             width: 70%;
-            margin: 30px auto;
+            margin: 25px auto;
         }
 
-        .venue-details {
+        .event-details {
             font-size: 1.1em;
             line-height: 1.8;
             letter-spacing: 1px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
-        .venue-details strong {
+        .event-details strong {
             color: #dfb163;
             font-weight: 600;
+            letter-spacing: 2px;
+        }
+        
+        .event-details p {
+            margin: 10px 0;
         }
 
         /* Interactive Buttons Section */
         .interactive-actions {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
@@ -90,9 +95,9 @@
             background: transparent;
             border: 1.5px solid #dfb163;
             color: #fdfbf7;
-            padding: 12px 25px;
+            padding: 10px 20px;
             font-family: 'Cinzel', serif;
-            font-size: 1em;
+            font-size: 0.9em;
             cursor: pointer;
             border-radius: 30px;
             transition: all 0.3s ease;
@@ -136,7 +141,8 @@
         
         <div class="gold-divider"></div>
         
-        <div class="venue-details">
+        <div class="event-details">
+            <p><strong>DATE & TIME</strong><br>May 8th, 2026 | 4:30 PM Onwards</p>
             <p><strong>VENUE</strong><br>[Placeholder: Venue Name]</p>
             <p><strong>LOCATION</strong><br>[Placeholder: Venue Address/Location]</p>
         </div>
@@ -147,7 +153,6 @@
         </div>
     </div>
 
-    <!-- Canvas Confetti Library for elegant pops -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
         function triggerConfetti() {
