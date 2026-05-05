@@ -12,7 +12,7 @@
             padding: 0;
             background: linear-gradient(135deg, #ff7e5f, #feb47b, #f75c82); /* Orange to Pink Gradient */
             font-family: 'Cinzel', serif;
-            color: #fff;
+            color: #2c2c2c; /* Dark grey for contrast */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,16 +21,16 @@
         }
 
         .invitation-card {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.85); /* Highly opaque white */
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 2px solid #dfb163; /* Elegant Gold */
+            border: 2px solid #d4af37; /* Deeper gold */
             border-radius: 20px;
             padding: 40px;
             text-align: center;
             max-width: 550px;
             width: 90%;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2), inset 0 0 20px rgba(223, 177, 99, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2), inset 0 0 20px rgba(212, 175, 55, 0.2);
             position: relative;
             z-index: 10;
         }
@@ -40,14 +40,14 @@
             letter-spacing: 4px;
             text-transform: uppercase;
             margin-bottom: 20px;
-            color: #fdfbf7;
+            color: #4a4a4a; /* Darker grey for header */
         }
 
         h1 {
             font-family: 'Great Vibes', cursive;
             font-size: 4em;
-            color: #dfb163; /* Gold */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #c59b27; /* Richer gold for names */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Softened shadow */
             margin: 10px 0;
             line-height: 1.1;
         }
@@ -55,13 +55,13 @@
         .ampersand {
             font-family: 'Great Vibes', cursive;
             font-size: 2.2em;
-            color: #dfb163;
+            color: #c59b27;
             margin: -10px 0;
         }
 
         .gold-divider {
             height: 2px;
-            background: linear-gradient(90deg, transparent, #dfb163, transparent);
+            background: linear-gradient(90deg, transparent, #c59b27, transparent);
             width: 70%;
             margin: 25px auto;
         }
@@ -71,11 +71,12 @@
             line-height: 1.8;
             letter-spacing: 1px;
             margin-bottom: 30px;
+            color: #2c2c2c; /* Ensure dark text */
         }
 
         .event-details strong {
-            color: #dfb163;
-            font-weight: 600;
+            color: #c59b27; /* Gold for emphasis */
+            font-weight: 700;
             letter-spacing: 2px;
         }
         
@@ -92,11 +93,12 @@
         }
 
         button {
-            background: transparent;
-            border: 1.5px solid #dfb163;
-            color: #fdfbf7;
+            background: #fff;
+            border: 2px solid #c59b27;
+            color: #c59b27; /* Gold text */
             padding: 10px 20px;
             font-family: 'Cinzel', serif;
+            font-weight: 600;
             font-size: 0.9em;
             cursor: pointer;
             border-radius: 30px;
@@ -109,10 +111,10 @@
         }
 
         button:hover {
-            background: rgba(223, 177, 99, 0.2);
-            border-color: #fff;
+            background: #c59b27;
+            border-color: #c59b27;
             color: #fff;
-            box-shadow: 0 0 15px rgba(223, 177, 99, 0.6);
+            box-shadow: 0 5px 15px rgba(197, 155, 39, 0.4);
             transform: translateY(-2px);
         }
 
@@ -174,8 +176,8 @@
 
               var particleCount = 50 * (timeLeft / duration);
               // since particles fall down, start a bit higher than random
-              confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#dfb163', '#ff7e5f', '#f75c82', '#ffffff'] }));
-              confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#dfb163', '#ff7e5f', '#f75c82', '#ffffff'] }));
+              confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#c59b27', '#ff7e5f', '#f75c82', '#ffffff'] }));
+              confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#c59b27', '#ff7e5f', '#f75c82', '#ffffff'] }));
             }, 250);
         }
 
