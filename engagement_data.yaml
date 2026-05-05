@@ -1,0 +1,18 @@
+event_details:
+  type: "Engagement Ceremony"
+  bride: "Sri Mitra"
+  groom: "Sai Kumar"
+  theme:
+    colors:
+      - "Orange"
+      - "Pink"
+      - "Gold"
+    vibe: "Elegant and Classy"
+
+venue:
+  name: "[Placeholder: Venue Name]"
+  location: "[Placeholder: Venue Address/Location]"
+
+interactive_elements:
+  celebration_pops: true
+  floating_hearts: true
